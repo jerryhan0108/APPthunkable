@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Web Bridge</title>
+  <script>
+    window.onload = () => {
+      // Kirim pesan ke Thunkable saat file ini dimuat
+      window.ReactNativeWebView.postMessage("Halo dari JavaScript!");
+    };
+
+    // Terima pesan dari Thunkable
+    window.addEventListener("message", (event) => {
+      alert("Pesan dari Thunkable: " + event.data);
+    });
+  </script>
+</head>
+<body>
+  <h1>Bridge Siap</h1>
+</body>
+</html>
