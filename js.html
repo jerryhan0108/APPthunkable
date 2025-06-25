@@ -11,7 +11,7 @@
     // Terima pesan dari Thunkable
     window.addEventListener("message", (event) => {
       console.log("Pesan diterima:", event);
-      alert("Pesan dari Thunkable: " + event.data);
+      alert("Pesan dari Thunkable: " + event.origin);
     });
   </script>
 </head>
